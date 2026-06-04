@@ -10,7 +10,7 @@ const LoginPage = () => {
     const [error, setError] = useState('')
 
     const token = localStorage.getItem('jwt_token')
-    if (token !== undefined) {
+    if (token !== null) {
         return navigate('/')
     }
 
