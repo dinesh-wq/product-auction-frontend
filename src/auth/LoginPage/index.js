@@ -4,9 +4,15 @@ import { useState } from 'react'
 
 const LoginPage = () => {
     const navigate = useNavigate()
+
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [error, setError] = useState('')
+
+    const token = localStorage.getItem('jwt_token')
+    if (token !== undefined) {
+        return navigate('/')
+    }
 
     const validateLogin = async (event) => {
         try {
