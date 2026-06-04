@@ -1,6 +1,6 @@
 import './index.css'
 import {Link, useNavigate} from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const LoginPage = () => {
     const navigate = useNavigate()
@@ -9,10 +9,12 @@ const LoginPage = () => {
     const [password, setPassword] = useState('')
     const [error, setError] = useState('')
 
-    const token = localStorage.getItem('jwt_token')
-    if (token !== null) {
-        return navigate('/')
-    }
+    useEffect(() => {
+        const token = localStorage.getItem('jwt_token')
+        if (token !== null) {
+            return navigate('/')
+        }
+    })
 
     const validateLogin = async (event) => {
         try {
