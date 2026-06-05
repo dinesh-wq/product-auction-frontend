@@ -73,7 +73,7 @@ const SignupPage = () => {
                 <label htmlFor="signupPassword">Password</label>
                 <input type="password" id="signupPassword" placeholder='Password' onChange={event => setPassword(event.target.value)} required />
                 <br />
-                <label htmlFor="signupConformPassword">Password</label>
+                <label htmlFor="signupConformPassword">Conform Password</label>
                 <input type="password" id="signupConformPassword" placeholder='ConformPassword' onChange={validateConformPassword} required />
                 <p className="signup-page-error-message">{conformPasswordError}</p>
                 <br />
