@@ -1,7 +1,27 @@
-.signup-page-main-container {
+.signup-page-background-container {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #ffffff;
+}
+.signup-page-main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    box-shadow: 0 2px 4px;
+    border-radius: 8px;
+    font-family: "Roboto";
+}
+.signup-page-main-heading {
+    align-self: center;
+    font-style: italic;
+    font-weight: bold;
+}
+.signup-page-error-message {
+    align-self: center;
+    color: red;
+    font-style: italic;
 }
