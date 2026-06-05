@@ -20,8 +20,9 @@ const SignupPage = () => {
     })
 
     const validateConformPassword = event => {
-        setConformPassword(event.target.value)
-        if (password !== conformPassword){
+        const value = event.target.value
+        setConformPassword(value)
+        if (password !== value){
             setConformPasswordError('Password and Conform Password must be same')
         }
         else {
@@ -78,7 +79,7 @@ const SignupPage = () => {
                 <br />
                 <button type="submit">Login</button>
                 <br />
-                <Link to="/signup">Don't have Account signup</Link>
+                <Link to="/login">Already have Account Login</Link>
             </form>
         </div>
     )
